@@ -67,17 +67,12 @@ class _MyHomePageState extends State<MyHomePage> {
                   final sal = double.parse(teste1);
                   final prest = double.parse(teste2);
                   final valor = sal * 30 / 100;
-                  print('Valor $valor');
-                  print('Prestação $prest');
-                  print('sal $sal');
                   if (prest <= valor) {
-                    print('$prest < $valor');
                     setState(() {
                       texto.clear();
                       texto.add('Você pode fazer o empréstimo');
                     });
                   } else if (prest > valor) {
-                    print('$prest < $valor');
                     setState(() {
                       texto.clear();
                       texto.add('Você não fazer o empréstimo');
